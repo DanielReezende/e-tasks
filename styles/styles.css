@@ -1,0 +1,182 @@
+.header {
+  width: 100%;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  background-color: #ddd2ef;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  width: 100%;
+  max-width: 968px;
+
+  padding: 0 16px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6f3cc3;
+}
+
+.container {
+  width: 100%;
+  max-width: 968px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 60px;
+
+  padding: 0 16px;
+
+  margin-top: -60px;
+}
+
+.section-task-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.section-task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e0dce4;
+}
+
+.section-task-header .info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.section-task-header .info strong {
+  font-size: 16px;
+  color: #6b6572;
+}
+
+.count-tasks,
+.count-finisheds {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  border-radius: 999px;
+}
+
+.count-tasks {
+  background-color: #ddd2ef;
+}
+
+.count-finisheds {
+  background-color: #bfe3d0;
+  color: #2d6c4a;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.form-container input {
+  flex: 1;
+  /* width: 100%; */
+
+  padding: 16px;
+
+  border-radius: 4px;
+
+  border: 1px solid #e0dce4;
+
+  color: var(--grey-800);
+
+  transition: all 0.2s linear;
+}
+
+.form-container input::placeholder {
+  color: var(--grey-400);
+  font-weight: 500;
+}
+
+.form-container input:focus {
+  border-color: #6f3cc3;
+}
+
+.form-container button {
+  width: 100%;
+  max-width: 100px;
+
+
+  height: 52px;
+
+  border-radius: 4px;
+
+  color: #fff;
+
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  background-color: #6f3cc3;
+}
+
+.task-list {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.task-item {
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #e0dce4;
+}
+
+.task-item p {
+  flex: 1;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+
+  color: #262428;
+}
+
+.task-item input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  color: #6b6572;
+}

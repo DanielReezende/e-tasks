@@ -1,0 +1,140 @@
+:root {
+  --white: #ffffff;
+  --white-200: #f4f4f5;
+  --grey-300: #e4e4e7;
+  --grey-400: #a1a1aa;
+  --grey-500: #71717a;
+  --grey-600: #52525b;
+  --grey-700: #3f3f46;
+  --grey-800: #27272a;
+  --grey-900: #18181b;
+
+  --green-200: #aff445;
+  --green-500: #84cc16;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+}
+
+body {
+  background: #F0EDF2;
+  color: #6F3CC3;
+  -webkit-font-smoothing: antialiased;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+body,
+input,
+select,
+textarea {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button,
+input[type="button"],
+a {
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+button:hover,
+input[type="button"]:hover,
+a:hover {
+  filter: brightness(0.75);
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+
+  appearance: none;
+
+  background-color: transparent;
+
+  /* margin: 0; */
+
+  outline: none;
+
+  font: inherit;
+  color: currentColor;
+  width: 20px;
+  height: 20px;
+  border: 1px dashed #6f3cc3;
+  border-radius: 10em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  background-color: var(--white);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--green-500);
+  border-color: var(--green-500);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
